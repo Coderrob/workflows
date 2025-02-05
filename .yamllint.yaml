@@ -1,0 +1,17 @@
+---
+extends: default
+
+rules:
+  empty-lines:
+    max: 1
+  empty-values: {}
+  hyphens:
+    max-spaces-after: 1
+  indentation:
+    spaces: 2
+  key-duplicates: {}
+  line-length:
+    allow-non-breakable-inline-mappings: true
+    allow-non-breakable-words: true
+    max: 120
+  trailing-spaces: {}
