@@ -1,0 +1,6 @@
+# Build artifacts:
+.vscode
+coverage/
+node_modules/
+dist/
+out/

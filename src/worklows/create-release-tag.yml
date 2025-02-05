@@ -1,0 +1,29 @@
+name: Create Release Tag
+
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  create-release-tag:
+    name: Create Release Tag
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Create Release Tag
+        uses: actions/create-tag@v1
