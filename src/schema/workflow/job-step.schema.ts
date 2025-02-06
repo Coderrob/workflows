@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { EnvSchema } from './env.schema';
+import { EnvSchema } from './env.schema.js';
 
 export const JobStepSchema = z.object({
   name: z.string().optional().describe('Name of the step.'),

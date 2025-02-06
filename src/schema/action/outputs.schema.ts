@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-import { validKeyRegex } from './constants';
-import { OutputEntrySchema } from './output-entry.schema';
+import { validKeyRegex } from './constants.js';
+import { OutputEntrySchema } from './output-entry.schema.js';
 
 /**
  * Outputs schema: a record whose keys match the validKeyRegex.

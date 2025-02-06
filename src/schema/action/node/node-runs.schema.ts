@@ -1,6 +1,5 @@
 import { z } from 'zod';
-
-import { NodeVersion } from './node-version';
+import { NodeVersion } from '../../../types/node-version.js';
 
 /**
  * Node action Runs Schema.

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { BrandingSchema } from './branding.schema';
+import { BrandingSchema } from './branding.schema.js';
 
 /**
  * Validates and parses a branding object.

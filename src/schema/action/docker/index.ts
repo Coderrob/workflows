@@ -1,2 +1,2 @@
-export * from './docker-runs.schema';
-export * from './docker-runs';
+export * from './docker-runs.schema.js';
+export * from './docker-runs.js';
