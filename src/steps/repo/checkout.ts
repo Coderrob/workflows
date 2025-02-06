@@ -1,4 +1,4 @@
-import { JobStepType } from '../../schema/workflow/job-step';
+import { JobStepType } from '../../schema/workflow/job-step.js';
 
 export const checkoutJobStep: JobStepType = {
   name: 'Checkout Repo',

@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { ConcurrencySchema } from './concurrency.schema';
-import { ContainerSchema } from './container.schema';
-import { EnvSchema } from './env.schema';
-import { JobStepSchema } from './job-step.schema';
+import { ConcurrencySchema } from './concurrency.schema.js';
+import { ContainerSchema } from './container.schema.js';
+import { EnvSchema } from './env.schema.js';
+import { JobStepSchema } from './job-step.schema.js';
 
 export const JobSchema = z
   .object({

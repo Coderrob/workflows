@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { CompositeRunsSchema } from './composite-runs.schema';
+import { CompositeRunsSchema } from './composite-runs.schema.js';
 
 /**
  * Type definition for the CompositeRuns object.

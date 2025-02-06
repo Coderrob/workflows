@@ -1,4 +1,4 @@
-import { WorkflowType } from '../schema/workflow/workflow';
+import { WorkflowType } from '../schema/workflow/workflow.js';
 
 export const createReleaseTagWorkflow: WorkflowType = {
   name: 'Create Release Tag',

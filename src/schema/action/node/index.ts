@@ -1,3 +1,2 @@
-export * from './node-runs.schema';
-export * from './node-runs';
-export * from './node-version';
+export * from './node-runs.schema.js';
+export * from './node-runs.js';

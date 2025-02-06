@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { BrandingSchema } from './branding.schema';
-import { InputsSchema } from './inputs.schema';
-import { OutputsSchema } from './outputs.schema';
-import { RunsSchema } from './runs.schema';
+import { BrandingSchema } from './branding.schema.js';
+import { InputsSchema } from './inputs.schema.js';
+import { OutputsSchema } from './outputs.schema.js';
+import { RunsSchema } from './runs.schema.js';
 
 /**
  * GitHub Action Schema.
