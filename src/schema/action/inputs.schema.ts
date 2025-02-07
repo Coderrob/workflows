@@ -8,9 +8,6 @@ import { InputEntrySchema } from './input-entry.schema.js';
  */
 export const InputsSchema = z
   .record(InputEntrySchema)
-  .refine(
-    (inputs) => Object.keys(inputs).every((key) => validKeyRegex.test(key)),
-    {
-      message: `Every input key must match the pattern${validKeyRegex.source}`,
-    }
-  );
+  .refine((inputs) => Object.keys(inputs).every(validKeyRegex.test), {
+    message: `Every input key must match the pattern${validKeyRegex.source}`,
+  });

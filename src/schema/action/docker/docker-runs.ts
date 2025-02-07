@@ -2,4 +2,4 @@ import { z } from 'zod';
 
 import { DockerRunsSchema } from './docker-runs.schema.js';
 
-export const DockerRunsType = z.infer<typeof DockerRunsSchema>;
+export type DockerRuns = z.infer<typeof DockerRunsSchema>;

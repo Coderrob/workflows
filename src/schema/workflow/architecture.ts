@@ -2,4 +2,4 @@ import { z } from 'zod';
 
 import { ArchitectureSchema } from './architecture.schema.js';
 
-export type ArchitectureType = z.infer<typeof ArchitectureSchema>;
+export type Architecture = z.infer<typeof ArchitectureSchema>;

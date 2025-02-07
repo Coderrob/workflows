@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { BrandIcons } from '../../types/brand-icons.js';
 
 /**
  * Represents the schema for branding information.
@@ -6,6 +7,6 @@ import { z } from 'zod';
 export const BrandingSchema = z
   .object({
     color: z.string(),
-    icon: z.string(),
+    icon: z.nativeEnum(BrandIcons),
   })
   .strict();

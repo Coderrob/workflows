@@ -8,4 +8,4 @@ import { BrandingSchema } from './branding.schema.js';
  * @param input - The branding object to validate and parse.
  * @returns A parsed branding object if valid, otherwise throws an error.
  */
-export type BrandingType = z.infer<typeof BrandingSchema>;
+export type Branding = z.infer<typeof BrandingSchema>;

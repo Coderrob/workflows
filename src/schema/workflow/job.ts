@@ -2,4 +2,4 @@ import { z } from 'zod';
 
 import { JobSchema } from './job.schema.js';
 
-export type JobType = z.infer<typeof JobSchema>;
+export type Job = z.infer<typeof JobSchema>;

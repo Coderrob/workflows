@@ -2,7 +2,11 @@
   "author": "coderrob",
   "dependencies": {
     "@actions/core": "^1.11.1",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "envsafe": "^2.0.3",
     "js-yaml": "^4.1.0",
+    "papaparse": "^5.5.2",
     "zod": "^3.24.1"
   },
   "description": "",
@@ -16,6 +20,7 @@
     "@types/jest": "^29.5.14",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.17.16",
+    "@types/papaparse": "^5.3.15",
     "@typescript-eslint/eslint-plugin": "^8.23.0",
     "@typescript-eslint/parser": "^8.23.0",
     "cross-env": "^7.0.3",
@@ -62,6 +67,8 @@
     "package:watch": "npm run package -- --watch",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 npx jest"
   },
+  "tsconfig": "./tsconfig.json",
   "type": "module",
+  "types": "environment.d.ts",
   "version": "0.0.1"
 }

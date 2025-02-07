@@ -9,7 +9,7 @@ export * from './input-entry.js';
 export * from './input-entry.schema.js';
 export * from './inputs.js';
 export * from './inputs.schema.js';
-export * from './manifest.js';
+export * from './action-manifest.js';
 export * from './node/index.js';
 export * from './output-entry.js';
 export * from './output-entry.schema.js';

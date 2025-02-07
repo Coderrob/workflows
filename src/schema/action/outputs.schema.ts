@@ -8,9 +8,6 @@ import { OutputEntrySchema } from './output-entry.schema.js';
  */
 export const OutputsSchema = z
   .record(OutputEntrySchema)
-  .refine(
-    (outputs) => Object.keys(outputs).every((key) => validKeyRegex.test(key)),
-    {
-      message: `Every output key must match the pattern ${validKeyRegex.source}`,
-    }
-  );
+  .refine((outputs) => Object.keys(outputs).every(validKeyRegex.test), {
+    message: `Every output key must match the pattern ${validKeyRegex.source}`,
+  });

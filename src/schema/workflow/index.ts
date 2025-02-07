@@ -1,55 +1,55 @@
-import { ArchitectureType } from './architecture.js';
+import { Architecture } from './architecture.js';
 import { ArchitectureSchema } from './architecture.schema.js';
-import { BranchType } from './branch.js';
+import { Branch } from './branch.js';
 import { BranchSchema } from './branch.schema.js';
-import { ConcurrencyType } from './concurrency.js';
+import { Concurrency } from './concurrency.js';
 import { ConcurrencySchema } from './concurrency.schema.js';
-import { ConfigurationType } from './configuration.js';
+import { Configuration } from './configuration.js';
 import { ConfigurationSchema } from './configuration.schema.js';
-import { ContainerType } from './container.js';
+import { Container } from './container.js';
 import { ContainerSchema } from './container.schema.js';
-import { EnvType } from './env.js';
+import { Env } from './env.js';
 import { EnvSchema } from './env.schema.js';
-import { EventType } from './event.js';
-import { EventActivityType } from './event-activity.js';
+import { Event } from './event.js';
+import { EventActivity } from './event-activity.js';
 import { EventActivitySchema } from './event-activity.schema.js';
 import { EventSchema } from './event.schema.js';
-import { ExpressionSyntaxType } from './expression-syntax.js';
+import { ExpressionSyntax } from './expression-syntax.js';
 import { ExpressionSyntaxSchema } from './expression-syntax.schema.js';
-import { GitHubEventType } from './github-event.js';
+import { GitHubEvent } from './github-event.js';
 import { GitHubEventSchema } from './github-event.schema.js';
-import { JobType } from './job.js';
-import { JobStepType } from './job-step.js';
+import { Job } from './job.js';
+import { JobStep } from './job-step.js';
 import { JobStepSchema } from './job-step.schema.js';
 import { JobSchema } from './job.schema.js';
-import { WorkflowType } from './workflow.js';
+import { Workflow } from './workflow.js';
 import { WorkflowSchema } from './workflow.schema.js';
 
 export {
   ArchitectureSchema,
-  ArchitectureType,
+  Architecture as ArchitectureType,
   BranchSchema,
-  BranchType,
+  Branch as BranchType,
   ConcurrencySchema,
-  ConcurrencyType,
+  Concurrency as ConcurrencyType,
   ConfigurationSchema,
-  ConfigurationType,
+  Configuration as ConfigurationType,
   ContainerSchema,
-  ContainerType,
+  Container as ContainerType,
   EnvSchema,
-  EnvType,
+  Env as EnvType,
   EventActivitySchema,
-  EventActivityType,
+  EventActivity as EventActivityType,
   EventSchema,
-  EventType,
+  Event as EventType,
   ExpressionSyntaxSchema,
-  ExpressionSyntaxType,
+  ExpressionSyntax as ExpressionSyntaxType,
   GitHubEventSchema,
-  GitHubEventType,
+  GitHubEvent as GitHubEventType,
   JobSchema,
-  JobType,
+  Job as JobType,
   JobStepSchema,
-  JobStepType,
+  JobStep as JobStepType,
   WorkflowSchema,
-  WorkflowType,
+  Workflow as WorkflowType,
 };
