@@ -8,4 +8,5 @@ export const actionsCheckout: ActionManifest = {
   description: 'Checks out a repository for workflow jobs.',
   permissions: {},
   releases: [],
+  environment: {},
 };

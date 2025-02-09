@@ -1,6 +1,5 @@
 import { z } from 'zod';
 import { TokenPermissionsSchema } from './token-permissions.schema.js';
-import { DEFAULT_TOKEN_PERMISSIONS } from './default-token-permissions.js';
 
 export const ManifestSchema = z.object({
   githubHost: z
@@ -18,15 +17,15 @@ export const ManifestSchema = z.object({
     .string()
     .optional()
     .describe('A brief description of the action.'),
-  permissions: TokenPermissionsSchema.optional().default(
-    DEFAULT_TOKEN_PERMISSIONS
+  permissions: TokenPermissionsSchema.describe(
+    'The GitHub Token permissions required by the action.'
   ),
   releases: z
     .array(z.string())
     .optional()
     .default([])
     .describe('Release tags available for this action.'),
-  environmentVariables: z
+  environment: z
     .record(z.string(), z.string())
     .optional()
     .default({})
