@@ -18,11 +18,11 @@
 
 import { z } from 'zod';
 
-import { CompositeRun } from '../types.js';
 import { BrandingSchema } from './branding.schema.js';
 import { InputsSchema } from './inputs.schema.js';
 import { OutputsSchema } from './outputs.schema.js';
 import { RunsSchema } from './runs.schema.js';
+import { CompositeRun } from '../../types/run-types.js';
 
 /**
  * GitHub Action Schema.

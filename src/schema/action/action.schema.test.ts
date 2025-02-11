@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  */
-import { NodeVersion } from '../types.js';
+import { NodeVersion } from '../../types/node-version.js';
 import { ActionSchema } from './action.schema.js';
 
 describe('ActionSchema', () => {

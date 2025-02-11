@@ -47,7 +47,7 @@ export default [
       ecmaVersion: 2023,
       sourceType: 'module',
       parserOptions: {
-        project: ['tsconfig.test.json'],
+        project: ['tsconfig.eslint.json'],
         tsconfigRootDir: '.',
       },
     },
@@ -55,7 +55,7 @@ export default [
       'import/resolver': {
         typescript: {
           alwaysTryTypes: true,
-          project: 'tsconfig.test.json',
+          project: 'tsconfig.eslint.json',
         },
       },
     },
