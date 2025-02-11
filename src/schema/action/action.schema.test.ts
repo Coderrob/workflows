@@ -28,8 +28,8 @@ describe('ActionSchema', () => {
           outputs: {},
           runs: {
             using: NodeVersion.NODE18,
-            main: 'index.js'
-          }
+            main: 'index.js',
+          },
         }).success
       ).toEqual(true));
 
@@ -42,8 +42,8 @@ describe('ActionSchema', () => {
           outputs: {},
           runs: {
             using: NodeVersion.NODE18,
-            main: ''
-          }
+            main: '',
+          },
         }).success
       ).toEqual(false));
   });

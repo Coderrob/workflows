@@ -53,7 +53,7 @@ export const ActionSchema = z
     ),
     runs: RunsSchema.describe(
       'The method of running the action. This can be a Node version, a composite, or a Docker container.'
-    )
+    ),
   })
   .superRefine((schema, ctx) => {
     const { runs, outputs } = schema;
@@ -64,7 +64,7 @@ export const ActionSchema = z
           ctx.addIssue({
             code: z.ZodIssueCode.custom,
             message: `For 'composite', each output key must contain a 'value' field. Missing value for output key '${key}'`,
-            path: ['outputs']
+            path: ['outputs'],
           });
         }
       });
