@@ -2,10 +2,12 @@ export enum OperationStatus {
   Success = 'success',
   Failure = 'failure',
 }
+
 export enum FilePermission {
   Read = 'read',
   Write = 'write',
 }
+
 export interface IFileSystemResult<T> {
   status: OperationStatus;
   requires: FilePermission;

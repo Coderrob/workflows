@@ -1,19 +1,40 @@
+/*
+ *
+ * Copyright 2025 Robert Lindley
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
 import { z } from 'zod';
+
+import { DockerRun } from '../../../types/run-types.js';
 
 /**
  * Docker action Runs Schema.
  *
  * A docker action requires a `dockerfile` and a `using: "docker"`.
  */
+
 export const DockerRunsSchema = z
   .object({
+    using: z.literal(DockerRun),
     'pre-entrypoint': z
       .string()
       .optional()
       .describe(
         'Allows you to run a script before the entrypoint action begins. For example, you can use pre-entrypoint: to run a prerequisite setup script.'
       ),
-    using: z.literal('docker'),
     image: z
       .string()
       .describe(
