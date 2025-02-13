@@ -85,7 +85,7 @@ abstract class FileProvider<T> implements IFileProvider<T> {
     return {
       status: OperationStatus.FAILURE,
       requires: FilePermission.READ,
-      content: defaultValue,
+      data: defaultValue,
       reason: `Read operation failed: ${isError(error) ? error.message : 'Unknown error'}`,
       encoding: DEFAULT_ENCODING,
     };
@@ -110,7 +110,7 @@ abstract class FileProvider<T> implements IFileProvider<T> {
       status: OperationStatus.SUCCESS,
       requires:
         content !== undefined ? FilePermission.READ : FilePermission.WRITE,
-      content,
+      data: content,
       reason,
       encoding: DEFAULT_ENCODING,
     };

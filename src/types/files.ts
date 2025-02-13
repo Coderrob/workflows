@@ -27,7 +27,7 @@ export enum FilePermission {
 export interface IFileSystemResult<T> {
   status: OperationStatus;
   requires?: FilePermission;
-  content?: T;
+  data?: T;
   reason?: string;
   encoding?: BufferEncoding;
 }
