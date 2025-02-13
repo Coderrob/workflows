@@ -1,0 +1,52 @@
+{
+  "GitHub Actions Workflow": {
+    "body": [
+      "name: ${1:CI Pipeline}",
+      "on: [push, pull_request]",
+      "jobs:",
+      "  ${2:build}:",
+      "    runs-on: ubuntu-latest",
+      "    steps:",
+      "      - name: Checkout repository",
+      "        uses: actions/checkout@v4",
+      "      - name: Setup Node.js",
+      "        uses: actions/setup-node@v4",
+      "        with:",
+      "          node-version: '${3:18}'",
+      "      - name: Run tests",
+      "        run: npm test"
+    ],
+    "description": "Boilerplate for a GitHub Actions workflow",
+    "prefix": "gha-workflow"
+  },
+  "GitHub Actions Context Variables": {
+    "prefix": "gha-context",
+    "body": [
+      "env:",
+      "  GITHUB_ACTOR: ${{ github.actor }}",
+      "  GITHUB_REPOSITORY: ${{ github.repository }}",
+      "  GITHUB_REF: ${{ github.ref }}",
+      "  GITHUB_SHA: ${{ github.sha }}",
+      "  GITHUB_WORKSPACE: ${{ github.workspace }}"
+    ],
+    "description": "Insert commonly used GitHub Actions context variables"
+  },
+  "GitHub Actions Job Context": {
+    "prefix": "gha-job",
+    "body": [
+      "steps:",
+      "  - name: Use Job Context",
+      "    run: echo \"Job Status: ${{ job.status }}\""
+    ],
+    "description": "Insert a GitHub Actions job context reference"
+  },
+  "GitHub Actions Steps Context": {
+    "prefix": "gha-steps",
+    "body": [
+      "steps:",
+      "  - name: Check Previous Step Outcome",
+      "    run: echo \"Previous step outcome: ${{ steps.${1:step_id}.outcome }}\""
+    ],
+    "description": "Insert GitHub Actions steps context reference"
+  }
+}
